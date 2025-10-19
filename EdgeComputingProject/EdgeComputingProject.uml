@@ -751,7 +751,7 @@
   <ArrowheadDSL:FullPort xmi:id="_Lwj2kJxiEfCWUKcEGwBpRA" base_Port="_LwdI4JxiEfCWUKcEGwBpRA"/>
   <ArrowheadDSL:SysDD xmi:id="_-Su4IJxkEfCWUKcEGwBpRA" base_Class="_-Ssb4JxkEfCWUKcEGwBpRA" SystemDatabase="mongoDB"/>
   <ArrowheadDSL:FullPort xmi:id="_OA72YJxlEfCWUKcEGwBpRA" base_Port="_OA6BMJxlEfCWUKcEGwBpRA"/>
-  <ArrowheadDSL:IDD xmi:id="_W8Sn0JxlEfCWUKcEGwBpRA" base_Class="_W8QLkJxlEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:IDD xmi:id="_W8Sn0JxlEfCWUKcEGwBpRA" base_Class="_W8QLkJxlEfCWUKcEGwBpRA" Protocol="mqtt"/>
   <ArrowheadDSL:SysD xmi:id="_d2j10JxmEfCWUKcEGwBpRA" base_Class="_d2iAoJxmEfCWUKcEGwBpRA" SystemDatabase="mongoDB"/>
   <ArrowheadDSL:FullPort xmi:id="_1O7qcJxmEfCWUKcEGwBpRA" base_Port="_1O51QJxmEfCWUKcEGwBpRA"/>
   <ArrowheadDSL:FullPort xmi:id="_-B2RkJxmEfCWUKcEGwBpRA" base_Port="_-Bz1UJxmEfCWUKcEGwBpRA"/>
