@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ArrowheadDSL="http://www.eclipse.org/papyrus/arrowhead" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_ZWE78JxgEfCaDuk-Jev05Q" name="EdgeComputingProject" visibility="package">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ZXhtcJxgEfCaDuk-Jev05Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ZXkJsJxgEfCaDuk-Jev05Q">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ZXsFgJxgEfCaDuk-Jev05Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_LdWEYCTQEe-9KvpFZizseA"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_O9pT0J9mEfCMJKk5vOWW4Q">
+      <importedPackage xmi:type="uml:Model" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_LdWEYCTQEe-9KvpFZizseA"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_stFu4KwBEfC__ZVbXqIX0Q">
+      <importedPackage xmi:type="uml:Model" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_LdWEYCTQEe-9KvpFZizseA"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Mv5CEJxhEfCWUKcEGwBpRA" name="SensorTurbine-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_haoLwJxhEfCWUKcEGwBpRA" name="sensorTurbineData" visibility="public" type="_X8QM0JxhEfCWUKcEGwBpRA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_ppmYUJxhEfCWUKcEGwBpRA" name="sysMonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_LwdI4JxiEfCWUKcEGwBpRA" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_F2KvwKHIEfCrFL04y_6sPA" name="deviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_JlotQC1rEfCBo_2-S0ygwQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_vBfBkKHIEfCrFL04y_6sPA" name="serviceOrchestration" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_e_uoECcDEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_5gHRsKHKEfCrFL04y_6sPA" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_U04rQKjuEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QAWtQJxhEfCWUKcEGwBpRA" name="turbineTelemetryService-MQTT" visibility="public">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ewNz8JxhEfCWUKcEGwBpRA" general="_X8QM0JxhEfCWUKcEGwBpRA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_X8QM0JxhEfCWUKcEGwBpRA" name="turbineTelemetryService">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_L7gykKTXEfCIYdUGbjPDcg" name="getSensorData" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ewKkYKTXEfCIYdUGbjPDcg" name="sensorData" type="_X8QM0JxhEfCWUKcEGwBpRA" direction="out"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2yO1EKmfEfC9IsXXW3mZ4w" name="sensor_id" type="_Mv5CEJxhEfCWUKcEGwBpRA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3RvDgKj6EfCgP7dIBMcwkQ" name="registerTelemetry">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-ITSsKj6EfCgP7dIBMcwkQ" name="sensorData" type="_X8QM0JxhEfCWUKcEGwBpRA" direction="inout"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ikZcUKj7EfCgP7dIBMcwkQ" name="echo" concurrency="guarded">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KvPvoKj8EfCgP7dIBMcwkQ" name="status" type="_X8QM0JxhEfCWUKcEGwBpRA" direction="inout"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-Ssb4JxkEfCWUKcEGwBpRA" name="SensorTurbine-DesignDescription">
+      <generalization xmi:type="uml:Generalization" xmi:id="_DtYi8JxlEfCWUKcEGwBpRA" general="_Mv5CEJxhEfCWUKcEGwBpRA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_OA6BMJxlEfCWUKcEGwBpRA" name="sensorTurbineData" visibility="public" type="_QAWtQJxhEfCWUKcEGwBpRA" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_W8QLkJxlEfCWUKcEGwBpRA" name="telemetrySensorTurbine-Implementation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_bvkwoJxlEfCWUKcEGwBpRA" general="_QAWtQJxhEfCWUKcEGwBpRA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_d2iAoJxmEfCWUKcEGwBpRA" name="DataStorageLongTerm-Design" visibility="public">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_1O51QJxmEfCWUKcEGwBpRA" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_-Bz1UJxmEfCWUKcEGwBpRA" name="sysMonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_8VdZgJxsEfCWUKcEGwBpRA" name="database" visibility="public" type="_nOLdwJxsEfCWUKcEGwBpRA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_gCkkUKjxEfCZcdNpomT3nQ" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_5rMH0KjyEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_H2JPwKwWEfC__ZVbXqIX0Q" name="GlobalServiceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_RzBIkKwWEfC__ZVbXqIX0Q" name="updateDatabase" visibility="public" type="_kHR2AKwJEfC__ZVbXqIX0Q" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-BNmIJxrEfCWUKcEGwBpRA" name="DataStorageLongTerm-DesignDescription" visibility="private">
+      <generalization xmi:type="uml:Generalization" xmi:id="_IrpIgJxsEfCWUKcEGwBpRA" general="_d2iAoJxmEfCWUKcEGwBpRA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_mx5aIJ7MEfCVG-qVgNvRnQ" name="dataStorageLongTerm" visibility="public" type="_q_5b4JxsEfCWUKcEGwBpRA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_wff3cKTYEfCIYdUGbjPDcg" name="FullPort3" visibility="public" type="_NwuRIJ7LEfCVG-qVgNvRnQ" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nOLdwJxsEfCWUKcEGwBpRA" name="dataStorageLongTermTransfer">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Qv6hUKjrEfCZcdNpomT3nQ" name="getData" visibility="public" concurrency="guarded">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l5dG4KjrEfCZcdNpomT3nQ" name="data" type="_nOLdwJxsEfCWUKcEGwBpRA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_q_5b4JxsEfCWUKcEGwBpRA" name="dataStorageLongTermTransfer-http">
+      <generalization xmi:type="uml:Generalization" xmi:id="_6GSMMJxsEfCWUKcEGwBpRA" general="_nOLdwJxsEfCWUKcEGwBpRA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yP3CgJxsEfCWUKcEGwBpRA" name="dataStorageLongTerm-Implementation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_1w6ucJxsEfCWUKcEGwBpRA" general="_q_5b4JxsEfCWUKcEGwBpRA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jiUakJxtEfCWUKcEGwBpRA" name="AITrainingServer-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_YPiM0JxvEfCqe8X9wRwBTQ" name="modelRepository" visibility="public" type="_2kBw8JxtEfCWUKcEGwBpRA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_c5D8sJxvEfCqe8X9wRwBTQ" name="sysmonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_iHxdQJxvEfCqe8X9wRwBTQ" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_17ffYJxvEfCqe8X9wRwBTQ" name="dataStorage" visibility="public" type="_nOLdwJxsEfCWUKcEGwBpRA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_fkCisKH1EfC6mu5cdaJ2hw" name="setTrainingParameters" visibility="public" type="_nLQBIKH0EfC6mu5cdaJ2hw" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_SHkzwKKIEfCrBrKVbFlmRw" name="GlobalServiceDiscovery" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_isInkKjxEfCZcdNpomT3nQ" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_9myasKjyEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_2kBw8JxtEfCWUKcEGwBpRA" name="modelRepositoryService">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Z7CXoKjsEfCZcdNpomT3nQ" name="getModels">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_f9Q_0KjsEfCZcdNpomT3nQ" name="models" type="_2kBw8JxtEfCWUKcEGwBpRA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_2w-n0JxtEfCWUKcEGwBpRA" name="modelRepositoryService-http">
+      <generalization xmi:type="uml:Generalization" xmi:id="_FFuDUJxvEfCqe8X9wRwBTQ" general="_2kBw8JxtEfCWUKcEGwBpRA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3IUw0JxtEfCWUKcEGwBpRA" name="AITrainingServer-DesignDescription" visibility="public">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Dwd9EJxuEfCWUKcEGwBpRA" general="_jiUakJxtEfCWUKcEGwBpRA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_JbNyAJxxEfCqe8X9wRwBTQ" name="modelRepository" visibility="public" type="_2w-n0JxtEfCWUKcEGwBpRA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_-VDSAKTYEfCIYdUGbjPDcg" name="FullPort3" visibility="public" type="_q_5b4JxsEfCWUKcEGwBpRA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_J2t-YKTZEfCIYdUGbjPDcg" name="FullPort4" visibility="public" type="_xBDBkKH0EfC6mu5cdaJ2hw" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3nVBAJxtEfCWUKcEGwBpRA" name="modelRepositoryService-Implementation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_DjteAJxvEfCqe8X9wRwBTQ" general="_2w-n0JxtEfCWUKcEGwBpRA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Hv9mkJxwEfCqe8X9wRwBTQ" name="AIMonitoringServer-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_z5O3QJxwEfCqe8X9wRwBTQ" name="sysMonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_0kDV4JxwEfCqe8X9wRwBTQ" name="requiredMaintenanceService" visibility="public" type="_K5YOkJxwEfCqe8X9wRwBTQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_1G1S0JxwEfCqe8X9wRwBTQ" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_1wQDQJxwEfCqe8X9wRwBTQ" name="dataStorageTemp" visibility="public" type="_CnrgIJ7LEfCVG-qVgNvRnQ" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_TsjqEKHDEfCrFL04y_6sPA" name="modelRepositoryService" visibility="public" type="_2kBw8JxtEfCWUKcEGwBpRA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_G7Wy8KKIEfCrBrKVbFlmRw" name="GlobalServiceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_lsNGUKjxEfCZcdNpomT3nQ" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="__y_zkKjyEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_K5YOkJxwEfCqe8X9wRwBTQ" name="requiredMaintenanceService"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fMT8QJxwEfCqe8X9wRwBTQ" name="requiredMaintenanceService-http">
+      <generalization xmi:type="uml:Generalization" xmi:id="_skJgEJxwEfCqe8X9wRwBTQ" general="_K5YOkJxwEfCqe8X9wRwBTQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jk9XgJxwEfCqe8X9wRwBTQ" name="requiredMainteanceService-Implementation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_rO8nsJxwEfCqe8X9wRwBTQ" general="_fMT8QJxwEfCqe8X9wRwBTQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_tSelsJxwEfCqe8X9wRwBTQ" name="AIMonitoringServer-DesignDescription">
+      <generalization xmi:type="uml:Generalization" xmi:id="_xUj7EJxwEfCqe8X9wRwBTQ" general="_Hv9mkJxwEfCqe8X9wRwBTQ"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_DMtBUJxxEfCqe8X9wRwBTQ" name="requiredMaintenanceService" visibility="public" type="_fMT8QJxwEfCqe8X9wRwBTQ" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pbqKQJ0iEfCw7LMGd_2nCQ" name="LocalCloudDesign-AIMonitoring" visibility="protected">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_c3CrwJ0lEfCw7LMGd_2nCQ" name="Property3" type="_Mv5CEJxhEfCWUKcEGwBpRA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Z_RXAJ7eEfCVG-qVgNvRnQ" name="Property3" type="_-gem8J7aEfCVG-qVgNvRnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pqU6oJ7eEfCVG-qVgNvRnQ" name="Property6" type="_4K4xIJ7KEfCVG-qVgNvRnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_J_g5QJ7fEfCVG-qVgNvRnQ" name="Property8" type="_Hv9mkJxwEfCqe8X9wRwBTQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5z4l4J7jEfCVG-qVgNvRnQ" name="serviceOrchestration-Design">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AQzcoCcDEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DRskIJ7kEfCVG-qVgNvRnQ" name="authentication-Design">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_TzZgEDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_n7Lk4J9lEfCMJKk5vOWW4Q" name="gatekeeper-Design">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_2jmY4CdBEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_AEQqQKHCEfCrFL04y_6sPA" name="gateKeeperGatewayPort" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Z5qiAKHCEfCrFL04y_6sPA" name="gateTunnelGatewayPort" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hVftgKHaEfCEDZi3knsmPA" name="consumptionAuthorisation-Design">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCnJiclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NtAwYKHtEfC6mu5cdaJ2hw" name="Property37" type="_PV-uwKHsEfC6mu5cdaJ2hw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_73uGAKwBEfC__ZVbXqIX0Q" name="serviceRegister_Design">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_30sNUCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q209MKwCEfC__ZVbXqIX0Q" name="gateTunnel-Design0">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_csJBkT0MEe-UlLZofXFl5A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_tZuQwKwUEfC__ZVbXqIX0Q" name="Property28" type="_aayikKwJEfC__ZVbXqIX0Q"/>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_mei7IJ7eEfCVG-qVgNvRnQ" name="Connector5">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_mekJQJ7eEfCVG-qVgNvRnQ" partWithPort="_c3CrwJ0lEfCw7LMGd_2nCQ" role="_haoLwJxhEfCWUKcEGwBpRA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_mekJQZ7eEfCVG-qVgNvRnQ" partWithPort="_Z_RXAJ7eEfCVG-qVgNvRnQ" role="_gAI0oJ7bEfCVG-qVgNvRnQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_VAnPMJ7fEfCVG-qVgNvRnQ" name="Connector9">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_VAn2QJ7fEfCVG-qVgNvRnQ" partWithPort="_pqU6oJ7eEfCVG-qVgNvRnQ" role="_rLCaEJ7LEfCVG-qVgNvRnQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_VAodUJ7fEfCVG-qVgNvRnQ" partWithPort="_J_g5QJ7fEfCVG-qVgNvRnQ" role="_1wQDQJxwEfCqe8X9wRwBTQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_cWM_4J7jEfCVG-qVgNvRnQ" name="Connector9">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_cWOOAJ7jEfCVG-qVgNvRnQ" partWithPort="_Z_RXAJ7eEfCVG-qVgNvRnQ" role="_isftMJ7bEfCVG-qVgNvRnQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_cWOOAZ7jEfCVG-qVgNvRnQ" partWithPort="_pqU6oJ7eEfCVG-qVgNvRnQ" role="_oqD30J7bEfCVG-qVgNvRnQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_es3yUKHCEfCrFL04y_6sPA" name="Connector22">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_es5AcKHCEfCrFL04y_6sPA" partWithPort="_n7Lk4J9lEfCMJKk5vOWW4Q">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMjHsEe-glMgvGnKGPg"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_es5AcaHCEfCrFL04y_6sPA" role="_AEQqQKHCEfCrFL04y_6sPA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="__Z3lQKHIEfCrFL04y_6sPA" name="Connector23">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="__Z4zYKHIEfCrFL04y_6sPA" partWithPort="_5z4l4J7jEfCVG-qVgNvRnQ">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_aPgaUCcDEe-kO5sLBQPK1Q"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="__Z4zYaHIEfCrFL04y_6sPA" partWithPort="_c3CrwJ0lEfCw7LMGd_2nCQ" role="_vBfBkKHIEfCrFL04y_6sPA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_W_MWIKHcEfCEDZi3knsmPA" name="Connector31">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_W_M9MKHcEfCEDZi3knsmPA" partWithPort="_hVftgKHaEfCEDZi3knsmPA">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCnKSclEe-kO5sLBQPK1Q"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_W_NkQKHcEfCEDZi3knsmPA" partWithPort="_c3CrwJ0lEfCw7LMGd_2nCQ" role="_5gHRsKHKEfCrFL04y_6sPA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_ch2Q8KHdEfCEDZi3knsmPA" name="Connector32">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ch3fEKHdEfCEDZi3knsmPA" partWithPort="_n7Lk4J9lEfCMJKk5vOWW4Q">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMzHsEe-glMgvGnKGPg"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ch3fEaHdEfCEDZi3knsmPA" role="_AEQqQKHCEfCrFL04y_6sPA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_aF1uQKHtEfC6mu5cdaJ2hw" name="Connector38">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_aF2VUKHtEfC6mu5cdaJ2hw" partWithPort="_J_g5QJ7fEfCVG-qVgNvRnQ" role="_0kDV4JxwEfCqe8X9wRwBTQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_aF2VUaHtEfC6mu5cdaJ2hw" partWithPort="_NtAwYKHtEfC6mu5cdaJ2hw" role="_jGoOwKHsEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_eBscYKKIEfCrBrKVbFlmRw" name="Connector38">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_eBtqgKKIEfCrBrKVbFlmRw" partWithPort="_J_g5QJ7fEfCVG-qVgNvRnQ" role="_G7Wy8KKIEfCrBrKVbFlmRw"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_eBtqgaKIEfCrBrKVbFlmRw" partWithPort="_n7Lk4J9lEfCMJKk5vOWW4Q">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMjHsEe-glMgvGnKGPg"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_dwcCAKwEEfC__ZVbXqIX0Q" name="Connector25">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_dwdQIKwEEfC__ZVbXqIX0Q" partWithPort="_Q209MKwCEfC__ZVbXqIX0Q">
+          <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_thKpsD0nEe-UlLZofXFl5A"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_dwdQIawEEfC__ZVbXqIX0Q" role="_Z5qiAKHCEfCrFL04y_6sPA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_elaiMKwEEfC__ZVbXqIX0Q" name="Connector26">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_elbwUKwEEfC__ZVbXqIX0Q" partWithPort="_Q209MKwCEfC__ZVbXqIX0Q">
+          <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_RSfNcD0nEe-UlLZofXFl5A"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_elbwUawEEfC__ZVbXqIX0Q" role="_Z5qiAKHCEfCrFL04y_6sPA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_fk96sKwEEfC__ZVbXqIX0Q" name="Connector27">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_fk-hwKwEEfC__ZVbXqIX0Q" partWithPort="_Q209MKwCEfC__ZVbXqIX0Q">
+          <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#__LaTUD0mEe-UlLZofXFl5A"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_fk-hwawEEfC__ZVbXqIX0Q" role="_Z5qiAKHCEfCrFL04y_6sPA"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_wce3IKwUEfC__ZVbXqIX0Q" name="Connector29">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_wcgFQKwUEfC__ZVbXqIX0Q" partWithPort="_pqU6oJ7eEfCVG-qVgNvRnQ" role="_rLCaEJ7LEfCVG-qVgNvRnQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_wcgFQawUEfC__ZVbXqIX0Q" partWithPort="_tZuQwKwUEfC__ZVbXqIX0Q" role="_HCrMcKwLEfC__ZVbXqIX0Q"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_fSFKMKwgEfC__ZVbXqIX0Q" name="Connector29">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_fSGYUKwgEfC__ZVbXqIX0Q" partWithPort="_c3CrwJ0lEfCw7LMGd_2nCQ" role="_haoLwJxhEfCWUKcEGwBpRA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_fSGYUawgEfC__ZVbXqIX0Q" partWithPort="_NtAwYKHtEfC6mu5cdaJ2hw" role="_elS-8Kj6EfCZcdNpomT3nQ"/>
+      </ownedConnector>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_4a6FsKHhEfCEDZi3knsmPA" name="LocalCloudDesign35">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FsaHhEfCEDZi3knsmPA" name="Property3" type="_Mv5CEJxhEfCWUKcEGwBpRA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FsqHhEfCEDZi3knsmPA" name="Property3" type="_-gem8J7aEfCVG-qVgNvRnQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6Fs6HhEfCEDZi3knsmPA" name="Property6" type="_4K4xIJ7KEfCVG-qVgNvRnQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FtKHhEfCEDZi3knsmPA" name="Property8" type="_Hv9mkJxwEfCqe8X9wRwBTQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FtaHhEfCEDZi3knsmPA" name="serviceOrchestration-Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AQzcoCcDEe-kO5sLBQPK1Q"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FtqHhEfCEDZi3knsmPA" name="authentication-Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_TzZgEDMYEe-MpZcrQa1Yrg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6Ft6HhEfCEDZi3knsmPA" name="gatekeeper-Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_2jmY4CdBEe-kO5sLBQPK1Q"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FuKHhEfCEDZi3knsmPA" name="serviceRegister">
+          <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_30sNUCTQEe-9KvpFZizseA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FuaHhEfCEDZi3knsmPA" name="gateTunnel-Design " visibility="private">
+          <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_csJBkT0MEe-UlLZofXFl5A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_4a6FuqHhEfCEDZi3knsmPA" name="gateKeeperGatewayPort" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_4a6Fu6HhEfCEDZi3knsmPA" name="gateTunnelGatewayPort" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FvKHhEfCEDZi3knsmPA" name="mQTT-Brooker-Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_Z8tekEE4Ee-LU4HFyzyyUw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4a6FvaHhEfCEDZi3knsmPA" name="consumptionAuthorisation-Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCnJiclEe-kO5sLBQPK1Q"/>
+        </ownedAttribute>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6FvqHhEfCEDZi3knsmPA" name="Connector5">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6Fv6HhEfCEDZi3knsmPA" partWithPort="_4a6FsaHhEfCEDZi3knsmPA" role="_haoLwJxhEfCWUKcEGwBpRA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FwKHhEfCEDZi3knsmPA" partWithPort="_4a6FsqHhEfCEDZi3knsmPA" role="_gAI0oJ7bEfCVG-qVgNvRnQ"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6FwaHhEfCEDZi3knsmPA" name="Connector9">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FwqHhEfCEDZi3knsmPA" partWithPort="_4a6Fs6HhEfCEDZi3knsmPA" role="_rLCaEJ7LEfCVG-qVgNvRnQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6Fw6HhEfCEDZi3knsmPA" partWithPort="_4a6FtKHhEfCEDZi3knsmPA" role="_1wQDQJxwEfCqe8X9wRwBTQ"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6FxKHhEfCEDZi3knsmPA" name="Connector9">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FxaHhEfCEDZi3knsmPA" partWithPort="_4a6FsqHhEfCEDZi3knsmPA" role="_isftMJ7bEfCVG-qVgNvRnQ"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FxqHhEfCEDZi3knsmPA" partWithPort="_4a6Fs6HhEfCEDZi3knsmPA" role="_oqD30J7bEfCVG-qVgNvRnQ"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6Fx6HhEfCEDZi3knsmPA" name="Connector22">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FyKHhEfCEDZi3knsmPA" partWithPort="_4a6Ft6HhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMjHsEe-glMgvGnKGPg"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FyaHhEfCEDZi3knsmPA" role="_4a6FuqHhEfCEDZi3knsmPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6FyqHhEfCEDZi3knsmPA" name="Connector23">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6Fy6HhEfCEDZi3knsmPA" partWithPort="_4a6FuaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_RSfNcD0nEe-UlLZofXFl5A"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FzKHhEfCEDZi3knsmPA" role="_4a6Fu6HhEfCEDZi3knsmPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6FzaHhEfCEDZi3knsmPA" name="Connector24">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6FzqHhEfCEDZi3knsmPA" partWithPort="_4a6FuaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#__LaTUD0mEe-UlLZofXFl5A"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6Fz6HhEfCEDZi3knsmPA" role="_4a6Fu6HhEfCEDZi3knsmPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F0KHhEfCEDZi3knsmPA" name="Connector21">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F0aHhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F0qHhEfCEDZi3knsmPA" partWithPort="_4a6FsaHhEfCEDZi3knsmPA" role="_LwdI4JxiEfCWUKcEGwBpRA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F06HhEfCEDZi3knsmPA" name="Connector19">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F1KHhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_q61PIC5iEfCIfLQZ2w4Gcg"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F1aHhEfCEDZi3knsmPA" partWithPort="_4a6FsaHhEfCEDZi3knsmPA" role="_F2KvwKHIEfCrFL04y_6sPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F1qHhEfCEDZi3knsmPA" name="Connector20">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F16HhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F2KHhEfCEDZi3knsmPA" partWithPort="_4a6FsqHhEfCEDZi3knsmPA" role="_dS1g4J7bEfCVG-qVgNvRnQ"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F2aHhEfCEDZi3knsmPA" name="Connector21">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F2qHhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F26HhEfCEDZi3knsmPA" partWithPort="_4a6Fs6HhEfCEDZi3knsmPA" role="__lx1YJ7KEfCVG-qVgNvRnQ"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F3KHhEfCEDZi3knsmPA" name="Connector22">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F3aHhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F3qHhEfCEDZi3knsmPA" partWithPort="_4a6FtKHhEfCEDZi3knsmPA" role="_1G1S0JxwEfCqe8X9wRwBTQ"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F36HhEfCEDZi3knsmPA" name="Connector23">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F4KHhEfCEDZi3knsmPA" partWithPort="_4a6FtaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_aPgaUCcDEe-kO5sLBQPK1Q"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F4aHhEfCEDZi3knsmPA" partWithPort="_4a6FsaHhEfCEDZi3knsmPA" role="_vBfBkKHIEfCrFL04y_6sPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F4qHhEfCEDZi3knsmPA" name="Connector26">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F46HhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F5KHhEfCEDZi3knsmPA" partWithPort="_4a6FtaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_Iy9q8CcDEe-kO5sLBQPK1Q"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F5aHhEfCEDZi3knsmPA" name="Connector27">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F5qHhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F56HhEfCEDZi3knsmPA" partWithPort="_4a6FtqHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_kNpaYG7AEe-JReobqA7-4Q"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F6KHhEfCEDZi3knsmPA" name="Connector28">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F6aHhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F6qHhEfCEDZi3knsmPA" partWithPort="_4a6FvaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCnJyclEe-kO5sLBQPK1Q"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F66HhEfCEDZi3knsmPA" name="Connector29">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F7KHhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F7aHhEfCEDZi3knsmPA" partWithPort="_4a6Ft6HhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRI5IDHsEe-glMgvGnKGPg"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F7qHhEfCEDZi3knsmPA" name="Connector30">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F76HhEfCEDZi3knsmPA" partWithPort="_4a6FuKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F8KHhEfCEDZi3knsmPA" partWithPort="_4a6FuaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_ZENn4D0oEe-UlLZofXFl5A"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F8aHhEfCEDZi3knsmPA" name="Connector31">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F8qHhEfCEDZi3knsmPA" partWithPort="_4a6FvaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCnKSclEe-kO5sLBQPK1Q"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F86HhEfCEDZi3knsmPA" partWithPort="_4a6FsaHhEfCEDZi3knsmPA" role="_5gHRsKHKEfCrFL04y_6sPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F9KHhEfCEDZi3knsmPA" name="Connector32">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F9aHhEfCEDZi3knsmPA" partWithPort="_4a6Ft6HhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMzHsEe-glMgvGnKGPg"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F9qHhEfCEDZi3knsmPA" role="_4a6FuqHhEfCEDZi3knsmPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F96HhEfCEDZi3knsmPA" name="Connector33">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F-KHhEfCEDZi3knsmPA" partWithPort="_4a6FuaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_thKpsD0nEe-UlLZofXFl5A"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F-aHhEfCEDZi3knsmPA" role="_4a6Fu6HhEfCEDZi3knsmPA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F-qHhEfCEDZi3knsmPA" name="Connector34">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F-6HhEfCEDZi3knsmPA" partWithPort="_4a6FuaHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="../EclipseArrowhead-5.0/Arrowhead-5.0.uml#_c06AAHAlEe-ApLYnIV6GpA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F_KHhEfCEDZi3knsmPA" partWithPort="_4a6FvKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_Z8tekkE4Ee-LU4HFyzyyUw"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4a6F_aHhEfCEDZi3knsmPA" name="Connector35">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F_qHhEfCEDZi3knsmPA" partWithPort="_4a6Ft6HhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_t8qgQHAnEe-ApLYnIV6GpA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4a6F_6HhEfCEDZi3knsmPA" partWithPort="_4a6FvKHhEfCEDZi3knsmPA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_Z8tekUE4Ee-LU4HFyzyyUw"/>
+          </end>
+        </ownedConnector>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4K4xIJ7KEfCVG-qVgNvRnQ" name="DataStorageTemp-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_7vybQJ7KEfCVG-qVgNvRnQ" name="sysMonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="__lx1YJ7KEfCVG-qVgNvRnQ" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_rLCaEJ7LEfCVG-qVgNvRnQ" name="dataStorageTempTransfer" visibility="public" type="_CnrgIJ7LEfCVG-qVgNvRnQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_oqD30J7bEfCVG-qVgNvRnQ" name="dataIngestor" visibility="public" type="_Jpx2oJ7bEfCVG-qVgNvRnQ" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_g_DasKjxEfCZcdNpomT3nQ" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_6tyNQKjyEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CnrgIJ7LEfCVG-qVgNvRnQ" name="dataStorageTempTransfer">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pEITIKjrEfCZcdNpomT3nQ" name="getData" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_u3eKwKjrEfCZcdNpomT3nQ" name="data" type="_CnrgIJ7LEfCVG-qVgNvRnQ"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GMEz8J7LEfCVG-qVgNvRnQ" name="DataStorageTemp-DesignDescription">
+      <generalization xmi:type="uml:Generalization" xmi:id="_JxxvUJ7LEfCVG-qVgNvRnQ" general="_4K4xIJ7KEfCVG-qVgNvRnQ"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_ZTS8cJ7LEfCVG-qVgNvRnQ" name="sensorTurbineData" visibility="package" type="_NwuRIJ7LEfCVG-qVgNvRnQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_W_BG0KTYEfCIYdUGbjPDcg" name="FullPort3" visibility="public" type="_B5g_UJ7bEfCVG-qVgNvRnQ" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NwuRIJ7LEfCVG-qVgNvRnQ" name="dataStorageTempTransfer-Websocket">
+      <generalization xmi:type="uml:Generalization" xmi:id="_WjixoJ7LEfCVG-qVgNvRnQ" general="_CnrgIJ7LEfCVG-qVgNvRnQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QjvyYJ7LEfCVG-qVgNvRnQ" name="dataStorageTemp-Implementation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_V1_IEJ7LEfCVG-qVgNvRnQ" general="_NwuRIJ7LEfCVG-qVgNvRnQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-gem8J7aEfCVG-qVgNvRnQ" name="DataIngestor-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_b7WwkJ7bEfCVG-qVgNvRnQ" name="sysMonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_dS1g4J7bEfCVG-qVgNvRnQ" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_gAI0oJ7bEfCVG-qVgNvRnQ" name="sensorTurbineData" visibility="public" type="_X8QM0JxhEfCWUKcEGwBpRA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_isftMJ7bEfCVG-qVgNvRnQ" name="dataIngestor" visibility="public" type="_Jpx2oJ7bEfCVG-qVgNvRnQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_fOUc4KjxEfCZcdNpomT3nQ" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_8J4-4KjyEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_B5g_UJ7bEfCVG-qVgNvRnQ" name="DataIngestor-DesignDescription">
+      <generalization xmi:type="uml:Generalization" xmi:id="_G9JRQJ7bEfCVG-qVgNvRnQ" general="_-gem8J7aEfCVG-qVgNvRnQ"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_hbq2cKTZEfCIYdUGbjPDcg" name="FullPort2" visibility="public" type="_QYSWAJ7bEfCVG-qVgNvRnQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_qMvqgKTZEfCIYdUGbjPDcg" name="FullPort3" visibility="public" type="_QAWtQJxhEfCWUKcEGwBpRA" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jpx2oJ7bEfCVG-qVgNvRnQ" name="writeTimeSeries">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2CPvYKjrEfCZcdNpomT3nQ" name="getTimeSeries">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6nifgKjrEfCZcdNpomT3nQ" name="timeSeries" type="_Jpx2oJ7bEfCVG-qVgNvRnQ"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QYSWAJ7bEfCVG-qVgNvRnQ" name="writeTimeSeries-http">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Zy2L8J7bEfCVG-qVgNvRnQ" general="_Jpx2oJ7bEfCVG-qVgNvRnQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RE9OwJ7bEfCVG-qVgNvRnQ" name="writeTimeSeries-Implementation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ZGL6QJ7bEfCVG-qVgNvRnQ" general="_QYSWAJ7bEfCVG-qVgNvRnQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OFVx0KHiEfCEDZi3knsmPA" name="LocalCloudDesign-AITraining">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sQWicKHjEfCEDZi3knsmPA" name="serviceOrchestration-Design">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AQzcoCcDEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_O9yx4KHkEfC6mu5cdaJ2hw" name="Property7">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCnJiclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZmOJIKHkEfC6mu5cdaJ2hw" name="Property8">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_TzZgEDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ol5NcKHkEfC6mu5cdaJ2hw" name="Property6">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_2jmY4CdBEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3JidEKHkEfC6mu5cdaJ2hw" name="Property6">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_csJBkT0MEe-UlLZofXFl5A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ksx78KHmEfC6mu5cdaJ2hw" name="Property7" type="_d2iAoJxmEfCWUKcEGwBpRA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_tImRsKHmEfC6mu5cdaJ2hw" name="Property8" type="_jiUakJxtEfCWUKcEGwBpRA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_TwmSMKHnEfC6mu5cdaJ2hw" name="gateKeeperGatewayPort" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_WB9Q0KHnEfC6mu5cdaJ2hw" name="gateTunnelGatewayPort" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XXpwEKH1EfC6mu5cdaJ2hw" name="Property19" type="_7pICQKHuEfC6mu5cdaJ2hw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ig5gUKwEEfC__ZVbXqIX0Q" name="serviceRegister_Design">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_30sNUCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_h8FggKHnEfC6mu5cdaJ2hw" name="Connector11">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_h8GuoKHnEfC6mu5cdaJ2hw" partWithPort="_ol5NcKHkEfC6mu5cdaJ2hw">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMzHsEe-glMgvGnKGPg"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_h8GuoaHnEfC6mu5cdaJ2hw" role="_TwmSMKHnEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_jsAmAKHnEfC6mu5cdaJ2hw" name="Connector12">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_jsB0IKHnEfC6mu5cdaJ2hw" partWithPort="_ol5NcKHkEfC6mu5cdaJ2hw">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMjHsEe-glMgvGnKGPg"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_jsB0IaHnEfC6mu5cdaJ2hw" role="_TwmSMKHnEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_ouMtgKHnEfC6mu5cdaJ2hw" name="Connector13">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ouNUkKHnEfC6mu5cdaJ2hw" partWithPort="_3JidEKHkEfC6mu5cdaJ2hw">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_RSfNcD0nEe-UlLZofXFl5A"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ouN7oKHnEfC6mu5cdaJ2hw" role="_WB9Q0KHnEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_pwuhgKHnEfC6mu5cdaJ2hw" name="Connector14">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_pwvIkKHnEfC6mu5cdaJ2hw" partWithPort="_3JidEKHkEfC6mu5cdaJ2hw">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_thKpsD0nEe-UlLZofXFl5A"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_pwvIkaHnEfC6mu5cdaJ2hw" role="_WB9Q0KHnEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_qnULQKHnEfC6mu5cdaJ2hw" name="Connector15">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_qnUyUKHnEfC6mu5cdaJ2hw" partWithPort="_3JidEKHkEfC6mu5cdaJ2hw">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#__LaTUD0mEe-UlLZofXFl5A"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_qnUyUaHnEfC6mu5cdaJ2hw" role="_WB9Q0KHnEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_tku-oKHnEfC6mu5cdaJ2hw" name="Connector16">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_tkvlsKHnEfC6mu5cdaJ2hw" partWithPort="_ksx78KHmEfC6mu5cdaJ2hw" role="_8VdZgJxsEfCWUKcEGwBpRA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_tkwMwKHnEfC6mu5cdaJ2hw" partWithPort="_tImRsKHmEfC6mu5cdaJ2hw" role="_17ffYJxvEfCqe8X9wRwBTQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_mqwGsKH1EfC6mu5cdaJ2hw" name="Connector21">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_mqwtwKH1EfC6mu5cdaJ2hw" partWithPort="_XXpwEKH1EfC6mu5cdaJ2hw" role="__1shoKH0EfC6mu5cdaJ2hw"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_mqwtwaH1EfC6mu5cdaJ2hw" partWithPort="_tImRsKHmEfC6mu5cdaJ2hw" role="_fkCisKH1EfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_ZOZFcKKIEfCrBrKVbFlmRw" name="Connector23">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ZObhsKKIEfCrBrKVbFlmRw" partWithPort="_ol5NcKHkEfC6mu5cdaJ2hw">
+          <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_IRJgMjHsEe-glMgvGnKGPg"/>
+        </end>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ZOcIwKKIEfCrBrKVbFlmRw" partWithPort="_tImRsKHmEfC6mu5cdaJ2hw" role="_SHkzwKKIEfCrBrKVbFlmRw"/>
+      </ownedConnector>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PV-uwKHsEfC6mu5cdaJ2hw" name="ControlRoom-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_eGn4kKHsEfC6mu5cdaJ2hw" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_hPUu4KHsEfC6mu5cdaJ2hw" name="sysMonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_jGoOwKHsEfC6mu5cdaJ2hw" name="requiredMaintenanceService" visibility="public" type="_K5YOkJxwEfCqe8X9wRwBTQ" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_yx3YkKHsEfC6mu5cdaJ2hw" name="sendTechnician" visibility="public" type="_sXbEsKHsEfC6mu5cdaJ2hw" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_IFYqcKH2EfC6mu5cdaJ2hw" name="deviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_JlotQC1rEfCBo_2-S0ygwQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_np9McKjxEfCZcdNpomT3nQ" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_At9nAKjzEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_elS-8Kj6EfCZcdNpomT3nQ" name="sensorData" visibility="public" type="_X8QM0JxhEfCWUKcEGwBpRA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_8FlHkKwcEfC__ZVbXqIX0Q" name="GlobalServiceDiscoveryConsume" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_-IVCcKwcEfC__ZVbXqIX0Q" name="GlobalServiceDiscoveryProduce" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sXbEsKHsEfC6mu5cdaJ2hw" name="sendTechnician"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7pICQKHuEfC6mu5cdaJ2hw" name="AITrainingControlRoom-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="__1shoKH0EfC6mu5cdaJ2hw" name="setTrainingParameters" visibility="public" type="_nLQBIKH0EfC6mu5cdaJ2hw" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_KSScUKH1EfC6mu5cdaJ2hw" name="sysmonitor" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AIbWYCTXEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_MZcWEKH1EfC6mu5cdaJ2hw" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Kq8-gKH2EfC6mu5cdaJ2hw" name="deviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_JlotQC1rEfCBo_2-S0ygwQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_jcEPsKjxEfCZcdNpomT3nQ" name="getPublicKey" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbBZACclEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_-fs_sKjyEfCZcdNpomT3nQ" name="consumerAuthentication" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="../EclipseArrowhead-5.0.zip_expanded/EclipseArrowhead-5.0/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_eHxQAKwcEfC__ZVbXqIX0Q" name="requiredMaintenanceService" visibility="public" type="_K5YOkJxwEfCqe8X9wRwBTQ" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_w6uYsKwcEfC__ZVbXqIX0Q" name="sendTechnician" visibility="public" type="_sXbEsKHsEfC6mu5cdaJ2hw" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_0O3C8KwcEfC__ZVbXqIX0Q" name="GlobalServiceDiscoveryProduce" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_0WWLAKwcEfC__ZVbXqIX0Q" name="GlobalServiceDiscoveryConsume" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nLQBIKH0EfC6mu5cdaJ2hw" name="setTrainingParameters">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hk0McKjsEfCZcdNpomT3nQ" name="setParameters">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_llGyEKjsEfCZcdNpomT3nQ" name="parameters" type="_nLQBIKH0EfC6mu5cdaJ2hw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sFcqQKH0EfC6mu5cdaJ2hw" name="AITrainingControlRoom-DesignDescription">
+      <generalization xmi:type="uml:Generalization" xmi:id="_v9suMKH0EfC6mu5cdaJ2hw" general="_7pICQKHuEfC6mu5cdaJ2hw"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_PLdKsKH1EfC6mu5cdaJ2hw" name="setTrainingParameters" visibility="public" type="_xBDBkKH0EfC6mu5cdaJ2hw" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_DMAXsKwdEfC__ZVbXqIX0Q" name="FullPort3" visibility="public" type="_fMT8QJxwEfCqe8X9wRwBTQ" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_IHcW8KwdEfC__ZVbXqIX0Q" name="FullPort2" visibility="public" type="_ZDqRYKTTEfCIYdUGbjPDcg" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xBDBkKH0EfC6mu5cdaJ2hw" name="setTrainingParameters-http">
+      <generalization xmi:type="uml:Generalization" xmi:id="_2BbyQKH0EfC6mu5cdaJ2hw" general="_nLQBIKH0EfC6mu5cdaJ2hw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4YWmUKH0EfC6mu5cdaJ2hw" name="setTrainingParameters-Implementation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_9o22oKH0EfC6mu5cdaJ2hw" general="_xBDBkKH0EfC6mu5cdaJ2hw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RcmM0KJ3EfC15et0XRHBYA" name="System_of_LocalcloudsDesign55">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YBJe8KJ3EfC15et0XRHBYA" name="LocalCloud1" visibility="public" type="_pbqKQJ0iEfCw7LMGd_2nCQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_b7miUKJ3EfC15et0XRHBYA" name="LocalCloud2" visibility="protected" type="_OFVx0KHiEfCEDZi3knsmPA"/>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_lzkdQKKIEfCrBrKVbFlmRw" name="Connector3">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_lzlrYKKIEfCrBrKVbFlmRw" partWithPort="_YBJe8KJ3EfC15et0XRHBYA" role="_Z5qiAKHCEfCrFL04y_6sPA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_lzlrYaKIEfCrBrKVbFlmRw" partWithPort="_b7miUKJ3EfC15et0XRHBYA" role="_WB9Q0KHnEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_ojN6YKKIEfCrBrKVbFlmRw" name="Connector4">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ojOhcKKIEfCrBrKVbFlmRw" partWithPort="_YBJe8KJ3EfC15et0XRHBYA" role="_AEQqQKHCEfCrFL04y_6sPA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ojOhcaKIEfCrBrKVbFlmRw" partWithPort="_b7miUKJ3EfC15et0XRHBYA" role="_TwmSMKHnEfC6mu5cdaJ2hw"/>
+      </ownedConnector>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_x-xXMKJ6EfC15et0XRHBYA" name="LocalcloudDesignDescription-AIMonitoring">
+      <generalization xmi:type="uml:Generalization" xmi:id="_0saCIKJ6EfC15et0XRHBYA" general="_pbqKQJ0iEfCw7LMGd_2nCQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Iv02gKTTEfCIYdUGbjPDcg" name="ControlRoom-DesignDescription">
+      <generalization xmi:type="uml:Generalization" xmi:id="_M8BKIKTTEfCIYdUGbjPDcg" general="_PV-uwKHsEfC6mu5cdaJ2hw"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_giASQKTTEfCIYdUGbjPDcg" name="FullPort2" visibility="public" type="_ZDqRYKTTEfCIYdUGbjPDcg" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_xJuswKwWEfC__ZVbXqIX0Q" name="FullPort3" visibility="public" type="_fMT8QJxwEfCqe8X9wRwBTQ" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZDqRYKTTEfCIYdUGbjPDcg" name="sendTechnician-http">
+      <generalization xmi:type="uml:Generalization" xmi:id="_dFrVUKTTEfCIYdUGbjPDcg" general="_sXbEsKHsEfC6mu5cdaJ2hw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qgBM4KjsEfCZcdNpomT3nQ" name="LocalcloudDesignDescription-AITraining">
+      <generalization xmi:type="uml:Generalization" xmi:id="_wysr4KjsEfCZcdNpomT3nQ" general="_OFVx0KHiEfCEDZi3knsmPA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aayikKwJEfC__ZVbXqIX0Q" name="DataBaseUpdater-Design">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_HCrMcKwLEfC__ZVbXqIX0Q" name="dataStorageTempTransfer" visibility="public" type="_CnrgIJ7LEfCVG-qVgNvRnQ" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_NMaK0KwLEfC__ZVbXqIX0Q" name="updateDatabase" visibility="public" type="_kHR2AKwJEfC__ZVbXqIX0Q" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_grVSkKwUEfC__ZVbXqIX0Q" name="GlobalServiceDiscovery" visibility="public" aggregation="composite">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_mgoBcDHqEe-glMgvGnKGPg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kHR2AKwJEfC__ZVbXqIX0Q" name="updateDatabase"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1nOpQKwKEfC__ZVbXqIX0Q" name="DataBaseUpdater-DesgnDescription">
+      <generalization xmi:type="uml:Generalization" xmi:id="_4oQxUKwKEfC__ZVbXqIX0Q" general="_aayikKwJEfC__ZVbXqIX0Q"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_5t5YIKwUEfC__ZVbXqIX0Q" name="FullPort2" visibility="public" type="_GMEz8J7LEfCVG-qVgNvRnQ" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_9Y_J0KwUEfC__ZVbXqIX0Q" name="FullPort3" visibility="public" type="_5X76wKwKEfC__ZVbXqIX0Q" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5X76wKwKEfC__ZVbXqIX0Q" name="dataBaseUpdater-http">
+      <generalization xmi:type="uml:Generalization" xmi:id="__i4aEKwKEfC__ZVbXqIX0Q" general="_kHR2AKwJEfC__ZVbXqIX0Q"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZWaTIJxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZWcIUJxgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/arrowhead#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Arrowhead_Profile/ArrowheadProfile_v5.0.profile.uml#_sX4gkDIREe6ldMRwfXEyUg"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXfRMJxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXfRMZxgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXf4QJxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXf4QZxgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXf4QpxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXf4Q5xgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXf4RJxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXf4RZxgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXf4RpxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXf4R5xgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXgfUJxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXgfUZxgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXgfUpxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXgfU5xgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXgfVJxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXgfVZxgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXhGYJxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXhGYZxgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZXhGYpxgEfCaDuk-Jev05Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXhGY5xgEfCaDuk-Jev05Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <ArrowheadDSL:SysD xmi:id="_Mv8scJxhEfCWUKcEGwBpRA" base_Class="_Mv5CEJxhEfCWUKcEGwBpRA" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:IDD xmi:id="_QAZwkJxhEfCWUKcEGwBpRA" base_Class="_QAWtQJxhEfCWUKcEGwBpRA" Protocol="mqtt"/>
+  <ArrowheadDSL:SD xmi:id="_X8SpEJxhEfCWUKcEGwBpRA" base_Class="_X8QM0JxhEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:FullPort xmi:id="_haqoAJxhEfCWUKcEGwBpRA" base_Port="_haoLwJxhEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:FullPort xmi:id="_ppo0kJxhEfCWUKcEGwBpRA" base_Port="_ppmYUJxhEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:FullPort xmi:id="_Lwj2kJxiEfCWUKcEGwBpRA" base_Port="_LwdI4JxiEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:SysDD xmi:id="_-Su4IJxkEfCWUKcEGwBpRA" base_Class="_-Ssb4JxkEfCWUKcEGwBpRA" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:FullPort xmi:id="_OA72YJxlEfCWUKcEGwBpRA" base_Port="_OA6BMJxlEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:IDD xmi:id="_W8Sn0JxlEfCWUKcEGwBpRA" base_Class="_W8QLkJxlEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:SysD xmi:id="_d2j10JxmEfCWUKcEGwBpRA" base_Class="_d2iAoJxmEfCWUKcEGwBpRA" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:FullPort xmi:id="_1O7qcJxmEfCWUKcEGwBpRA" base_Port="_1O51QJxmEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:FullPort xmi:id="_-B2RkJxmEfCWUKcEGwBpRA" base_Port="_-Bz1UJxmEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:SysDD xmi:id="_-BQpcJxrEfCWUKcEGwBpRA" base_Class="_-BNmIJxrEfCWUKcEGwBpRA" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:SD xmi:id="_nOOhEJxsEfCWUKcEGwBpRA" base_Class="_nOLdwJxsEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:IDD xmi:id="_q_74IJxsEfCWUKcEGwBpRA" base_Class="_q_5b4JxsEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:IDD xmi:id="_yP5ewJxsEfCWUKcEGwBpRA" base_Class="_yP3CgJxsEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:FullPort xmi:id="_8VfOsJxsEfCWUKcEGwBpRA" base_Port="_8VdZgJxsEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:SysD xmi:id="_jiW20JxtEfCWUKcEGwBpRA" base_Class="_jiUakJxtEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:SD xmi:id="_2kE0QJxtEfCWUKcEGwBpRA" base_Class="_2kBw8JxtEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:IDD xmi:id="_2xAdAJxtEfCWUKcEGwBpRA" base_Class="_2w-n0JxtEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:SysDD xmi:id="_3IXNEJxtEfCWUKcEGwBpRA" base_Class="_3IUw0JxtEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:IDD xmi:id="_3nXdQJxtEfCWUKcEGwBpRA" base_Class="_3nVBAJxtEfCWUKcEGwBpRA"/>
+  <ArrowheadDSL:FullPort xmi:id="_YPvoMJxvEfCqe8X9wRwBTQ" base_Port="_YPiM0JxvEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_c5HAAJxvEfCqe8X9wRwBTQ" base_Port="_c5D8sJxvEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_iH3j4JxvEfCqe8X9wRwBTQ" base_Port="_iHxdQJxvEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_17iisJxvEfCqe8X9wRwBTQ" base_Port="_17ffYJxvEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:SysD xmi:id="_HwHXkJxwEfCqe8X9wRwBTQ" base_Class="_Hv9mkJxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:SD xmi:id="_K5bR4JxwEfCqe8X9wRwBTQ" base_Class="_K5YOkJxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:IDD xmi:id="_fMW_kJxwEfCqe8X9wRwBTQ" base_Class="_fMT8QJxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:IDD xmi:id="_jlAa0JxwEfCqe8X9wRwBTQ" base_Class="_jk9XgJxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:SysDD xmi:id="_tShB8JxwEfCqe8X9wRwBTQ" base_Class="_tSelsJxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_z5TIsJxwEfCqe8X9wRwBTQ" base_Port="_z5O3QJxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_0kFLEJxwEfCqe8X9wRwBTQ" base_Port="_0kDV4JxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_1G3IAJxwEfCqe8X9wRwBTQ" base_Port="_1G1S0JxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_1wR4cJxwEfCqe8X9wRwBTQ" base_Port="_1wQDQJxwEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_DMvdkJxxEfCqe8X9wRwBTQ" base_Port="_DMtBUJxxEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_JbRcYJxxEfCqe8X9wRwBTQ" base_Port="_JbNyAJxxEfCqe8X9wRwBTQ"/>
+  <ArrowheadDSL:LocalCloudDesign xmi:id="_pb4zwJ0iEfCw7LMGd_2nCQ" base_Class="_pbqKQJ0iEfCw7LMGd_2nCQ" LC_Name="LocalCloudDesign-AIMonitoring"/>
+  <ArrowheadDSL:SysD xmi:id="_4LHaoJ7KEfCVG-qVgNvRnQ" base_Class="_4K4xIJ7KEfCVG-qVgNvRnQ" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:FullPort xmi:id="_7wAdsZ7KEfCVG-qVgNvRnQ" base_Port="_7vybQJ7KEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="__l0Rop7KEfCVG-qVgNvRnQ" base_Port="__lx1YJ7KEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:SD xmi:id="_CnvxkJ7LEfCVG-qVgNvRnQ" base_Class="_CnrgIJ7LEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:SysDD xmi:id="_GMIeUJ7LEfCVG-qVgNvRnQ" base_Class="_GMEz8J7LEfCVG-qVgNvRnQ" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:IDD xmi:id="_NwwtYJ7LEfCVG-qVgNvRnQ" base_Class="_NwuRIJ7LEfCVG-qVgNvRnQ" Protocol="websocket"/>
+  <ArrowheadDSL:IDD xmi:id="_QjzcwJ7LEfCVG-qVgNvRnQ" base_Class="_QjvyYJ7LEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_rLE2UJ7LEfCVG-qVgNvRnQ" base_Port="_rLCaEJ7LEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_mx_gwJ7MEfCVG-qVgNvRnQ" base_Port="_mx5aIJ7MEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:SysD xmi:id="_-giRUJ7aEfCVG-qVgNvRnQ" base_Class="_-gem8J7aEfCVG-qVgNvRnQ" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:SysDD xmi:id="_B5kCoJ7bEfCVG-qVgNvRnQ" base_Class="_B5g_UJ7bEfCVG-qVgNvRnQ" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:SD xmi:id="_Jp058J7bEfCVG-qVgNvRnQ" base_Class="_Jpx2oJ7bEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:IDD xmi:id="_QYUyQJ7bEfCVG-qVgNvRnQ" base_Class="_QYSWAJ7bEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:IDD xmi:id="_RFASEJ7bEfCVG-qVgNvRnQ" base_Class="_RE9OwJ7bEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_b7ZM0p7bEfCVG-qVgNvRnQ" base_Port="_b7WwkJ7bEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_dS3WEJ7bEfCVG-qVgNvRnQ" base_Port="_dS1g4J7bEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_ishiYJ7bEfCVG-qVgNvRnQ" base_Port="_isftMJ7bEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_oqFtAJ7bEfCVG-qVgNvRnQ" base_Port="_oqD30J7bEfCVG-qVgNvRnQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_AEYmEKHCEfCrFL04y_6sPA" base_Port="_AEQqQKHCEfCrFL04y_6sPA"/>
+  <ArrowheadDSL:FullPort xmi:id="_Z5vagKHCEfCrFL04y_6sPA" base_Port="_Z5qiAKHCEfCrFL04y_6sPA"/>
+  <ArrowheadDSL:FullPort xmi:id="_TspJoKHDEfCrFL04y_6sPA" base_Port="_TsjqEKHDEfCrFL04y_6sPA"/>
+  <ArrowheadDSL:FullPort xmi:id="_F2PBMKHIEfCrFL04y_6sPA" base_Port="_F2KvwKHIEfCrFL04y_6sPA"/>
+  <ArrowheadDSL:FullPort xmi:id="_vBiE4KHIEfCrFL04y_6sPA" base_Port="_vBfBkKHIEfCrFL04y_6sPA"/>
+  <ArrowheadDSL:FullPort xmi:id="_5gMKMKHKEfCrFL04y_6sPA" base_Port="_5gHRsKHKEfCrFL04y_6sPA"/>
+  <ArrowheadDSL:LocalCloudDesign xmi:id="_4bJWQKHhEfCEDZi3knsmPA" base_Class="_4a6FsKHhEfCEDZi3knsmPA" LC_Name="LocalCloudDesign35"/>
+  <ArrowheadDSL:FullPort xmi:id="_4bUVYKHhEfCEDZi3knsmPA" base_Port="_4a6Fu6HhEfCEDZi3knsmPA"/>
+  <ArrowheadDSL:FullPort xmi:id="_4bVjgKHhEfCEDZi3knsmPA" base_Port="_4a6FuqHhEfCEDZi3knsmPA"/>
+  <ArrowheadDSL:LocalCloudDesign xmi:id="_OFY1IKHiEfCEDZi3knsmPA" base_Class="_OFVx0KHiEfCEDZi3knsmPA"/>
+  <ArrowheadDSL:FullPort xmi:id="_Tws_4KHnEfC6mu5cdaJ2hw" base_Port="_TwmSMKHnEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_WCAUIKHnEfC6mu5cdaJ2hw" base_Port="_WB9Q0KHnEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:SysD xmi:id="_PWBLAKHsEfC6mu5cdaJ2hw" base_Class="_PV-uwKHsEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_eGsKBKHsEfC6mu5cdaJ2hw" base_Port="_eGn4kKHsEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_hPWkEKHsEfC6mu5cdaJ2hw" base_Port="_hPUu4KHsEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_jGpc5KHsEfC6mu5cdaJ2hw" base_Port="_jGoOwKHsEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:SD xmi:id="_sXdg8KHsEfC6mu5cdaJ2hw" base_Class="_sXbEsKHsEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_yx5NwKHsEfC6mu5cdaJ2hw" base_Port="_yx3YkKHsEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:SysD xmi:id="_7pLFkKHuEfC6mu5cdaJ2hw" base_Class="_7pICQKHuEfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:SD xmi:id="_nLR2UKH0EfC6mu5cdaJ2hw" base_Class="_nLQBIKH0EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:SysDD xmi:id="_sFfGgKH0EfC6mu5cdaJ2hw" base_Class="_sFcqQKH0EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:IDD xmi:id="_xBFd0KH0EfC6mu5cdaJ2hw" base_Class="_xBDBkKH0EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:IDD xmi:id="_4YZCkKH0EfC6mu5cdaJ2hw" base_Class="_4YWmUKH0EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="__1uW0KH0EfC6mu5cdaJ2hw" base_Port="__1shoKH0EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_KSURgKH1EfC6mu5cdaJ2hw" base_Port="_KSScUKH1EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_MZeLQqH1EfC6mu5cdaJ2hw" base_Port="_MZcWEKH1EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_PLe_4KH1EfC6mu5cdaJ2hw" base_Port="_PLdKsKH1EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_fkEX4KH1EfC6mu5cdaJ2hw" base_Port="_fkCisKH1EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_IFZ4kqH2EfC6mu5cdaJ2hw" base_Port="_IFYqcKH2EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:FullPort xmi:id="_Kq-MpKH2EfC6mu5cdaJ2hw" base_Port="_Kq8-gKH2EfC6mu5cdaJ2hw"/>
+  <ArrowheadDSL:System_of_LocalcloudsDesign xmi:id="_RcuvsKJ3EfC15et0XRHBYA" base_Class="_RcmM0KJ3EfC15et0XRHBYA"/>
+  <ArrowheadDSL:LocalcloudDesignDescription xmi:id="_x-1ooKJ6EfC15et0XRHBYA" base_Class="_x-xXMKJ6EfC15et0XRHBYA"/>
+  <ArrowheadDSL:FullPort xmi:id="_G7hLAKKIEfCrBrKVbFlmRw" base_Port="_G7Wy8KKIEfCrBrKVbFlmRw"/>
+  <ArrowheadDSL:FullPort xmi:id="_SHoeIKKIEfCrBrKVbFlmRw" base_Port="_SHkzwKKIEfCrBrKVbFlmRw"/>
+  <ArrowheadDSL:SysDD xmi:id="_Iv7kMKTTEfCIYdUGbjPDcg" base_Class="_Iv02gKTTEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:IDD xmi:id="_ZDt7wKTTEfCIYdUGbjPDcg" base_Class="_ZDqRYKTTEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:FullPort xmi:id="_giCugKTTEfCIYdUGbjPDcg" base_Port="_giASQKTTEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:FullPort xmi:id="_W_HNcKTYEfCIYdUGbjPDcg" base_Port="_W_BG0KTYEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:FullPort xmi:id="_wfkv8KTYEfCIYdUGbjPDcg" base_Port="_wff3cKTYEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:FullPort xmi:id="_-VFuQKTYEfCIYdUGbjPDcg" base_Port="_-VDSAKTYEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:FullPort xmi:id="_J2waoKTZEfCIYdUGbjPDcg" base_Port="_J2t-YKTZEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:FullPort xmi:id="_hbsroKTZEfCIYdUGbjPDcg" base_Port="_hbq2cKTZEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:FullPort xmi:id="_qMxfsKTZEfCIYdUGbjPDcg" base_Port="_qMvqgKTZEfCIYdUGbjPDcg"/>
+  <ArrowheadDSL:LocalcloudDesignDescription xmi:id="_qgFeUKjsEfCZcdNpomT3nQ" base_Class="_qgBM4KjsEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_U07ukKjuEfCZcdNpomT3nQ" base_Port="_U04rQKjuEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_fOZ8cKjxEfCZcdNpomT3nQ" base_Port="_fOUc4KjxEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_gCpc0KjxEfCZcdNpomT3nQ" base_Port="_gCkkUKjxEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_g_ITMKjxEfCZcdNpomT3nQ" base_Port="_g_DasKjxEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_isNgEKjxEfCZcdNpomT3nQ" base_Port="_isInkKjxEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_jcH6EKjxEfCZcdNpomT3nQ" base_Port="_jcEPsKjxEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_lsRXwKjxEfCZcdNpomT3nQ" base_Port="_lsNGUKjxEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_nqA20KjxEfCZcdNpomT3nQ" base_Port="_np9McKjxEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_5rQZQKjyEfCZcdNpomT3nQ" base_Port="_5rMH0KjyEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_6t13oKjyEfCZcdNpomT3nQ" base_Port="_6tyNQKjyEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_8J8pQKjyEfCZcdNpomT3nQ" base_Port="_8J4-4KjyEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_9m2FEKjyEfCZcdNpomT3nQ" base_Port="_9myasKjyEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_-fxRIKjyEfCZcdNpomT3nQ" base_Port="_-fs_sKjyEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="__zEFAKjyEfCZcdNpomT3nQ" base_Port="__y_zkKjyEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_AuB4cKjzEfCZcdNpomT3nQ" base_Port="_At9nAKjzEfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:FullPort xmi:id="_elWCQKj6EfCZcdNpomT3nQ" base_Port="_elS-8Kj6EfCZcdNpomT3nQ"/>
+  <ArrowheadDSL:SysD xmi:id="_aa1l4KwJEfC__ZVbXqIX0Q" base_Class="_aayikKwJEfC__ZVbXqIX0Q" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:SD xmi:id="_kHUSQKwJEfC__ZVbXqIX0Q" base_Class="_kHR2AKwJEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:SysDD xmi:id="_1nSToKwKEfC__ZVbXqIX0Q" base_Class="_1nOpQKwKEfC__ZVbXqIX0Q" SystemDatabase="mongoDB"/>
+  <ArrowheadDSL:IDD xmi:id="_5X_lIKwKEfC__ZVbXqIX0Q" base_Class="_5X76wKwKEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_HCwE8KwLEfC__ZVbXqIX0Q" base_Port="_HCrMcKwLEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_NMcAAKwLEfC__ZVbXqIX0Q" base_Port="_NMaK0KwLEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_5t70YKwUEfC__ZVbXqIX0Q" base_Port="_5t5YIKwUEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_9ZBmEKwUEfC__ZVbXqIX0Q" base_Port="_9Y_J0KwUEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_H2LE8KwWEfC__ZVbXqIX0Q" base_Port="_H2JPwKwWEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_RzDk0KwWEfC__ZVbXqIX0Q" base_Port="_RzBIkKwWEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_xJwh8KwWEfC__ZVbXqIX0Q" base_Port="_xJuswKwWEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_eH06YKwcEfC__ZVbXqIX0Q" base_Port="_eHxQAKwcEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_w60fUKwcEfC__ZVbXqIX0Q" base_Port="_w6uYsKwcEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_0O77cKwcEfC__ZVbXqIX0Q" base_Port="_0O3C8KwcEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_0WbDgKwcEfC__ZVbXqIX0Q" base_Port="_0WWLAKwcEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_8FqAEKwcEfC__ZVbXqIX0Q" base_Port="_8FlHkKwcEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_-IZT4KwcEfC__ZVbXqIX0Q" base_Port="_-IVCcKwcEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_DMEpIKwdEfC__ZVbXqIX0Q" base_Port="_DMAXsKwdEfC__ZVbXqIX0Q"/>
+  <ArrowheadDSL:FullPort xmi:id="_IHh2gKwdEfC__ZVbXqIX0Q" base_Port="_IHcW8KwdEfC__ZVbXqIX0Q"/>
+</xmi:XMI>
